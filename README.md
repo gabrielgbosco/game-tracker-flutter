@@ -64,18 +64,21 @@ assets/
 docs/
   gcs/
     Plano_Gerenciamento_Configuracao_Game_Tracker.pdf
-                                -> plano de GCS (item de configuração)
+                                -> plano de GCS, versão 1.1
+    Plano_Gerenciamento_Configuracao_Game_Tracker.docx
+                                -> fonte editável do plano
 ```
 
 ## Itens de configuração
 
-O plano de Gerenciamento de Configuração de Software está versionado em
+O plano de Gerenciamento de Configuração de Software, versão 1.1, está
+versionado em
 [`docs/gcs/Plano_Gerenciamento_Configuracao_Game_Tracker.pdf`](docs/gcs/Plano_Gerenciamento_Configuracao_Game_Tracker.pdf).
 O repositório é público para permitir a verificação. A branch `main` não
-aceita push direto: alterações entram por pull request, com revisão de
-um par com acesso de escrita. Os ambientes `staging` e `production`
-estão configurados no GitHub; em `production`, o responsável do
-repositório é revisor obrigatório.
+aceita push direto: alterações entram por pull request e a proteção exige
+1 aprovação de outra conta. O par com acesso de escrita ainda não foi
+designado. Os ambientes `staging` e `production` estão configurados no
+GitHub; em `production`, **gabrielgbosco** é revisor obrigatório.
 
 ## Funcionalidades implementadas
 
