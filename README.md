@@ -61,7 +61,21 @@ lib/
 assets/
   images/                       -> capas dos 6 jogos (geradas localmente,
                                     sem uso de imagens de terceiros)
+docs/
+  gcs/
+    Plano_Gerenciamento_Configuracao_Game_Tracker.pdf
+                                -> plano de GCS (item de configuração)
 ```
+
+## Itens de configuração
+
+O plano de Gerenciamento de Configuração de Software está versionado em
+[`docs/gcs/Plano_Gerenciamento_Configuracao_Game_Tracker.pdf`](docs/gcs/Plano_Gerenciamento_Configuracao_Game_Tracker.pdf).
+O repositório é público para permitir a verificação. A branch `main` não
+aceita push direto: alterações entram por pull request, com revisão de
+um par com acesso de escrita. Os ambientes `staging` e `production`
+estão configurados no GitHub; em `production`, o responsável do
+repositório é revisor obrigatório.
 
 ## Funcionalidades implementadas
 
