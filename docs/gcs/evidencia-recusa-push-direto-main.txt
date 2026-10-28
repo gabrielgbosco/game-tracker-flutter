@@ -1,0 +1,17 @@
+Evidência de recusa do push direto na branch main
+Repositório: https://github.com/gabrielgbosco/game-tracker-flutter
+Data: 2026-10-28
+Conta utilizada: gabrielgbosco
+Comando: git push origin main
+
+Saída do Git:
+
+remote: error: GH006: Protected branch update failed for refs/heads/main.
+remote:
+remote: - Changes must be made through a pull request.
+To https://github.com/gabrielgbosco/game-tracker-flutter.git
+ ! [remote rejected] main -> main (protected branch hook declined)
+error: failed to push some refs to 'https://github.com/gabrielgbosco/game-tracker-flutter.git'
+
+A branch main está protegida: exige pull request com 1 aprovação, inclui administradores
+e não aceita push direto.
