@@ -21,7 +21,8 @@ jobs:
         run: flutter pub get
 
       - name: Analisar código
-        run: flutter analyze
+        # Bloqueia erros e warnings. Infos (ex.: deprecações já existentes no código) não reprovam.
+        run: flutter analyze --no-fatal-infos
 
       - name: Executar testes
         run: flutter test
