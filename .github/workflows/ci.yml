@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Instalar dependências
+        run: flutter pub get
+
+      - name: Analisar código
+        # Bloqueia erros e warnings. Infos (ex.: deprecações já existentes no código) não reprovam.
+        run: flutter analyze --no-fatal-infos
+
+      - name: Executar testes
+        run: flutter test
