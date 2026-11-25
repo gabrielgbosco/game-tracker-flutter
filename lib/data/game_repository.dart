@@ -104,6 +104,15 @@ class GameRepository {
     return sum / games.length;
   }
 
+  /// Média das avaliações ponderada pelas horas jogadas.
+  /// Retorna 0 quando nenhum jogo tem horas registradas.
+  double get weightedAverageRating {
+    final hours = totalHours;
+    if (hours == 0) return 0;
+    final sum = games.fold(0.0, (s, g) => s + g.rating * g.hoursPlayed);
+    return sum / hours;
+  }
+
   Game get mostPlayedGame =>
       games.reduce((a, b) => a.hoursPlayed >= b.hoursPlayed ? a : b);
 
